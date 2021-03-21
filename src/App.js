@@ -7,6 +7,7 @@ import Login from "./Login/Login";
 import Destination from "./Destination/Destination";
 import Header from "./Header/Header";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import Error from "./Error/Error";
 
 export const UserContext = createContext();
 function App() {
@@ -28,6 +29,9 @@ function App() {
             </PrivateRoute>
             <Route exact path="/">
               <Home></Home>
+            </Route>
+            <Route path="*">
+              <Error></Error>
             </Route>
 
             <PrivateRoute path="/:vehId">
