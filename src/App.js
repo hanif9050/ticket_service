@@ -7,7 +7,6 @@ import Login from "./Login/Login";
 import Destination from "./Destination/Destination";
 import Header from "./Header/Header";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
-import Error from "./Error/Error";
 
 export const UserContext = createContext();
 function App() {
