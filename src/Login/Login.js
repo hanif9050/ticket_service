@@ -74,6 +74,7 @@ const Login = () => {
       setUser(newUser);
     }
   };
+
   const signIn = () => {
     const userinfo = { ...user };
     userinfo.signIn = true;
@@ -81,12 +82,28 @@ const Login = () => {
 
     setUser(userinfo);
   };
+
   const signUp = () => {
     const userInfo = { ...user };
     userInfo.signIn = false;
     userInfo.signUp = false;
     setUser(userInfo);
   };
+  if (user.error) {
+    setTimeout(function () {
+      const userInfo = { ...user };
+      userInfo.error = false;
+      setUser(userInfo);
+    }, 5000);
+  }
+  if (user.successSignUP) {
+    setTimeout(function () {
+      const userInfo = { ...user };
+      userInfo.successSignUP = false;
+      setUser(userInfo);
+    }, 5000);
+  }
+
   const googleSignIn = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase
@@ -248,10 +265,14 @@ const Login = () => {
               </button>
             )}
 
-            {user.error && <p>password not match</p>}
+            {user.error && user.confirmPassword !== "" && (
+              <p style={{ color: "red" }}>password not match</p>
+            )}
             {user.successIn && <p>Login Successfully</p>}
             {user.successSignUP && <p>Created Successfully</p>}
-            {user.failedSignUp && <p>Failed to create account</p>}
+            {user.failedSignUp && (
+              <p style={{ color: "green" }}>Failed to create account</p>
+            )}
           </fieldset>
         </form>
       )}

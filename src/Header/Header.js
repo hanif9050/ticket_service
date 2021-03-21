@@ -7,7 +7,7 @@ const Header = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
     <div className="header-main">
-      <h1>Urban Riders</h1>
+      <h1>Adventurous Ride</h1>
       <ul>
         <li>
           <Link to="/home" className="headerLink">

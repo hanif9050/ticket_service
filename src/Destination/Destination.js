@@ -15,6 +15,7 @@ const Destination = () => {
     pickTo: "",
     showData: false,
     journeyDate: "",
+    error: false,
   });
   let getData;
   useEffect(() => {
@@ -54,14 +55,29 @@ const Destination = () => {
       setDestination(userInfo);
       console.log(destination.showData);
     }
+    if (destination.pickFrom === "" || destination.pickTo === "") {
+      const userInfo = { ...destination };
+      userInfo.error = true;
+      setDestination(userInfo);
+    }
     e.preventDefault();
   };
+  if (destination.error) {
+    setTimeout(function () {
+      const userInfo = { ...destination };
+      userInfo.error = false;
+      setDestination(userInfo);
+    }, 3000);
+  }
   return (
     <div className="destination-container">
       <div className="destination-divider">
         <div className="destination-searchPart">
           {!destination.showData && (
             <form>
+              {destination.error && (
+                <span style={{ color: "red" }}>Both Field Must be Fill</span>
+              )}
               <fieldset>
                 <label htmlFor="pickFrom">Pick From:</label>
                 <input
@@ -69,6 +85,8 @@ const Destination = () => {
                   id="pickFrom"
                   name="pickFrom"
                   onBlur={eventHandeler}
+                  placeholder="Destination"
+                  required
                 />
                 <br />
                 <br />
@@ -78,6 +96,8 @@ const Destination = () => {
                   id="pickTo"
                   name="pickTo"
                   onBlur={eventHandeler}
+                  placeholder="Current Location"
+                  required
                 />
                 <br />
                 <br />
@@ -171,7 +191,32 @@ const Destination = () => {
                     </span>
                     <h2>{newData && newData[0] && newData[0].capacity}</h2>
                     <h2>{newData && newData[0] && newData[0].price}</h2>
-                    {/* <h1>{getData && getData.name}</h1> */}
+                  </div>
+                  <div className="showData-info">
+                    <img
+                      className="destinationImage"
+                      src={newData && newData[0] && newData[0].image}
+                      alt={newData && newData[0] && newData[0].name}
+                    />
+                    <h2>{newData && newData[0] && newData[0].name}</h2>
+                    <span className="destination-icon">
+                      <FontAwesomeIcon icon={faUserFriends} />
+                    </span>
+                    <h2>{newData && newData[0] && newData[0].capacity}</h2>
+                    <h2>{newData && newData[0] && newData[0].price}</h2>
+                  </div>
+                  <div className="showData-info">
+                    <img
+                      className="destinationImage"
+                      src={newData && newData[0] && newData[0].image}
+                      alt={newData && newData[0] && newData[0].name}
+                    />
+                    <h2>{newData && newData[0] && newData[0].name}</h2>
+                    <span className="destination-icon">
+                      <FontAwesomeIcon icon={faUserFriends} />
+                    </span>
+                    <h2>{newData && newData[0] && newData[0].capacity}</h2>
+                    <h2>{newData && newData[0] && newData[0].price}</h2>
                   </div>
                   {/* end of single card */}
                   <p>{destination.journeyDate}</p>
