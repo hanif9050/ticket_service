@@ -30,9 +30,6 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="*">
-              <Error></Error>
-            </Route>
 
             <PrivateRoute path="/:vehId">
               <Destination></Destination>
