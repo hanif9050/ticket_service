@@ -1,0 +1,33 @@
+.main-form {
+  width: 70rem;
+  margin: 3rem auto;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+.form-control {
+  width: 100%;
+  max-width: 60rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  border: none none 1px solid black none;
+}
+.btn-control {
+  border: none;
+  width: 100%;
+  max-width: 20rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+}
+.google-sign-in {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.google-sign-in button {
+  padding: 0.2rem 3rem;
+}

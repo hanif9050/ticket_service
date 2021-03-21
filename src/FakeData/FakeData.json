@@ -1,0 +1,32 @@
+{
+  "transport": [
+    {
+      "id": 1,
+      "name": "Bike",
+      "price": "$67",
+      "capacity": "1",
+      "image": "https://images.unsplash.com/photo-1552642762-f55d06580015?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8dmVoaWNsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 2,
+      "name": "Car",
+      "price": "$120",
+      "capacity": "4",
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Y2FyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 3,
+      "name": "Bus",
+      "price": "$49",
+      "capacity": "Available-70",
+      "image": "https://images.unsplash.com/photo-1562620669-98104534c6cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Train",
+      "price": "$83",
+      "capacity": "Available-800",
+      "image": "https://images.unsplash.com/photo-1551616653-e301df0d9af0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzJ8fHRyYWlufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    }
+  ]
+}

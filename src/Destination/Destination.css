@@ -1,0 +1,50 @@
+.destination-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.destination-searchPart {
+  background-color: lightgray;
+  max-width: 30rem;
+  padding: 1.5rem;
+  align-self: flex-start;
+  border-radius: 1.5rem;
+}
+.destinationImage {
+  width: 100px;
+  margin-right: 1rem;
+}
+.destination-icon {
+  font-size: 3rem;
+}
+.showData-info {
+  background-color: wheat;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.showData-info h2 {
+  margin: 0 1rem;
+}
+.showData-location {
+  background-color: lightsalmon;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+.destination-divider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.destination-map {
+  padding: 1rem;
+  max-width: 40rem;
+}
+.destination-map img {
+  width: 100%;
+}
+.price {
+  padding-left: 1.5rem;
+}
